@@ -1,0 +1,1 @@
+ref: [AngularJSの$scopeをController as で置き換えるべき理由 - Qiita](https://qiita.com/Quramy/items/e55ba394031794236fc9)
