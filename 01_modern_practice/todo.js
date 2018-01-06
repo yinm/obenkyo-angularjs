@@ -7,10 +7,11 @@ var TodoController = (function () {
         this.newtodo = '';
         this.editedTodo = null;
     }
+    TodoController.prototype.addTodo = function () {
+    };
+    TodoController.prototype.editTodo = function (todo) {
+    };
+    TodoController.prototype.saveEdits = function (todo, event) {
+    };
     return TodoController;
 }());
-function TodoCtrl($scope, $routeParams, $filter, store) {
-    $scope.addTodo = function () { };
-    $scope.editTodo = function (todo) { };
-    $scope.saveEdits = function (todo, event) { };
-}
