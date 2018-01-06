@@ -27,8 +27,32 @@ var TodoController = (function () {
         });
     };
     TodoController.prototype.editTodo = function (todo) {
+        this.editedTodo = todo;
+        this.originalTodo = angular.extend({}, todo);
     };
     TodoController.prototype.saveEdits = function (todo, event) {
+        var _this = this;
+        if (event === 'blur' && this.saveEvent === 'submit') {
+            this.saveEvent = null;
+            return;
+        }
+        this.saveEvent = event;
+        if (this.reverted) {
+            this.reverted = null;
+            return;
+        }
+        todo.title = todo.title.trim();
+        if (todo.title === this.originalTodo.title) {
+            this.editedTodo = null;
+            return;
+        }
+        store[todo.title ? 'put' : 'delete'](todo)
+            .then(function () { }, function () {
+            todo.title = _this.originalTodo.title;
+        })
+            .finally(function () {
+            _this.editedTodo = null;
+        });
     };
     return TodoController;
 }());
