@@ -6,6 +6,7 @@ var TodoController = (function () {
         this.store = store;
         this.newTodo = '';
         this.editedTodo = null;
+        TodoController.$inject = ['$scope', '$routeParams', '$filter', 'store'];
     }
     TodoController.prototype.addTodo = function () {
         var _this = this;

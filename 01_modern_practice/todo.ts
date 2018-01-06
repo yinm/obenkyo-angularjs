@@ -7,6 +7,8 @@ class TodoController {
 
     this.newTodo = '';
     this.editedTodo = null;
+
+    TodoController.$inject = ['$scope', '$routeParams', '$filter', 'store'];
   }
 
   addTodo() {
