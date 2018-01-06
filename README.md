@@ -1,1 +1,1 @@
-# obenkyo-angularjs
+AngularJSのお勉強リポジトリです。
