@@ -1,0 +1,1 @@
+ref: [AngularJS1.4とbindToController - Qiita](https://qiita.com/shin_v1/items/131780e2f0d82cbf799a)
