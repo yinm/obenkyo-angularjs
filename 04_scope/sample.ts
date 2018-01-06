@@ -8,6 +8,10 @@ class MainCtrl {
   }
 }
 
+class ChildCtrl {
+}
+
 
 angular.module('myApp', [])
-  .controller('MainCtrl', MainCtrl);
+  .controller('MainCtrl', MainCtrl)
+  .controller('ChildCtrl', ChildCtrl);

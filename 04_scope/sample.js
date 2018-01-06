@@ -7,5 +7,11 @@ var MainCtrl = (function () {
     };
     return MainCtrl;
 }());
+var ChildCtrl = (function () {
+    function ChildCtrl() {
+    }
+    return ChildCtrl;
+}());
 angular.module('myApp', [])
-    .controller('MainCtrl', MainCtrl);
+    .controller('MainCtrl', MainCtrl)
+    .controller('ChildCtrl', ChildCtrl);
