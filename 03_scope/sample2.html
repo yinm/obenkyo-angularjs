@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Controller</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<p>親スコープ {{name}}</p>
+<p>親スコープ {{twitter}}</p>
+
+<div ng-controller="myChildCtrl">
+  <p>myChildCtrl {{name}}</p>
+  <p>myChildCtrl {{twitter}}</p>
+</div>
+
+<script>
+angular.module('myApp', [])
+  .controller('myCtrl', ['$scope', ($scope) => {
+    $scope.name = 'can.i.do.web';
+  }])
+  .controller('myChildCtrl', ['$scope', ($scope) => {
+    $scope.twitter = 'きゃない';
+  }]);
+</script>
+</body>
+</html>
