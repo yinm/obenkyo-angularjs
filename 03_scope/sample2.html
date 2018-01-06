@@ -5,22 +5,25 @@
   <title>Controller</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 </head>
-<body ng-controller="myCtrl">
-<p>親スコープ {{name}}</p>
-<p>親スコープ {{twitter}}</p>
+<body ng-controller="parentCtrl">
+<div>
+  <p>親スコープ</p>
+  <input type="text" ng-model="author.name">
+</div>
 
-<div ng-controller="myChildCtrl">
-  <p>myChildCtrl {{name}}</p>
-  <p>myChildCtrl {{twitter}}</p>
+<div ng-controller="childCtrl">
+  <p>子スコープ</p>
+  <input type="text" ng-model="author.name">
 </div>
 
 <script>
 angular.module('myApp', [])
-  .controller('myCtrl', ['$scope', ($scope) => {
-    $scope.name = 'can.i.do.web';
+  .controller('parentCtrl', ['$scope', ($scope) => {
+    const author = {};
+    author.name = 'Kanai';
+    $scope.author = author;
   }])
-  .controller('myChildCtrl', ['$scope', ($scope) => {
-    $scope.twitter = 'きゃない';
+  .controller('childCtrl', ['$scope', ($scope) => {
   }]);
 </script>
 </body>
