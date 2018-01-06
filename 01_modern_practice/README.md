@@ -1,0 +1,1 @@
+ref: [AngularJSモダンプラクティス - Qiita](https://qiita.com/armorik83/items/5542daed0c408cb9f605)
