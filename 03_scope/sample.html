@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Controller</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<div>筆者：{{myName}}</div>
+
+<div>
+  エキスパートたち
+  <ul>
+    <li ng-repeat="expert in expertList">{{expert}}</li>
+  </ul>
+</div>
+
+<div>
+  {{author.name}} ( twitter - {{author.twitter}} )
+</div>
+
+<script src="sample.js"></script>
+</body>
+</html>

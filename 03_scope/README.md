@@ -1,0 +1,1 @@
+ref: [AngularJSのControllerとScopeの基礎を学ぼう | HTML5Experts.jp](https://html5experts.jp/canidoweb/16732/)
