@@ -1,15 +1,18 @@
-function childController() {
-  console.log(this.num);
-  console.log(this.notBind);
+class ChildController {
+  constructor() {
+    console.log(this.num);
+    console.log(this.notBind);
+  }
 }
 
-function childDirective() {
-    var ddo = {
+class ChildDirective {
+  static ddo() {
+    return {
       restrict: 'E',
       scope: {
-          notBind: '=prop2',
+        notBind: '=prop2',
       },
-      controller: childController,
+      controller: ChildController,
       controllerAs: 'child',
       bindToController: {
         num: '=prop1',
@@ -20,8 +23,7 @@ function childDirective() {
         "</div>"
       ].join('')
     };
-
-    return ddo;
+  }
 }
 
-angular.module('myApp').directive('childDirective', childDirective);
+angular.module('myApp').directive('childDirective', ChildDirective.ddo);
