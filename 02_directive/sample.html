@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="SampleCtrlA">
+        <dir-a my-arr="arr"><span ng-repeat="a in arr">{{a}},</span></dir-a>
+    </div>
+    <div ng-controller="SampleCtrlB">
+        <dir-b my-arr="arr"><span ng-repeat="a in arr">{{a}},</span></dir-b>
+    </div>
+    <div ng-controller="SampleCtrlC">
+        <dir-c my-arr="arr"><span ng-repeat="a in arr">{{a}},</span></dir-c>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
+    <script src="sample.js"></script>
+</body>
+</html>
