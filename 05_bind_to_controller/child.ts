@@ -17,11 +17,7 @@ class ChildDirective {
       bindToController: {
         num: '=prop1',
       },
-      template: [
-        "<div style='background-color: #d0d0d0'>",
-          "<span>num: {{child.num}} in child </span>",
-        "</div>"
-      ].join('')
+      templateUrl: 'child.html',
     };
   }
 }

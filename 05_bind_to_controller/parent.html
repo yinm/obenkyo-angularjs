@@ -1,0 +1,5 @@
+<div style='background-color: #f0f0f0'>
+  <span>num: {{parent.num}} in parent</span>
+  <button ng-click="parent.increment()">+1</button>
+  <child-directive prop1="parent.num" prop2="parent.notBind"></child-directive>
+</div>
