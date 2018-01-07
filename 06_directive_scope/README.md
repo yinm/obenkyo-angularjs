@@ -1,0 +1,1 @@
+ref: [AngularJSのdirectiveのScopeがよくわからないメモ - Qiita](https://qiita.com/nogson/items/8215a71d172be0ce0985)
