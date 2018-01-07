@@ -1,3 +1,4 @@
+// 2nd
 angular.module('myApp', []);
 var ParentController = (function () {
     function ParentController() {

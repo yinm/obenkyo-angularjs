@@ -1,3 +1,4 @@
+// 2nd
 var ChildController = (function () {
     function ChildController() {
         console.log(this.num);
@@ -11,13 +12,12 @@ var ChildDirective = (function () {
     ChildDirective.ddo = function () {
         return {
             restrict: 'E',
-            scope: {
-                notBind: '=prop2',
-            },
+            scope: {},
             controller: ChildController,
             controllerAs: 'child',
             bindToController: {
                 num: '=prop1',
+                notBind: '=prop2',
             },
             templateUrl: 'child.html',
         };
